@@ -1,6 +1,10 @@
+// must import the Reques and Response other wise typescript cannot infer,
+//it can infer if it was in server.ts file
+
+import {Request, Response} from "express"
 import TodoModel from "../models/Todo";
 
-const getAllTodo = async (req, res) => {
+const getAllTodo = async (req: Request, res: Response) => {
   try {
     const todos = await TodoModel.find({});
     res.status(200).send({
@@ -18,7 +22,7 @@ const getAllTodo = async (req, res) => {
   }
 };
 
-const addTodo = async (req, res) => {
+const addTodo = async (req: Request, res: Response) => {
   if (!req?.body?.name) {
     return res.status(400).send({
       success: false,
@@ -48,7 +52,7 @@ const addTodo = async (req, res) => {
   }
 };
 
-const editTodo = async (req, res) => {
+const editTodo = async (req: Request, res: Response) => {
   const { id } = req?.params;
   const { name } = req?.body;
 
@@ -82,7 +86,7 @@ const editTodo = async (req, res) => {
   }
 };
 
-const completedTodo = async (req, res) => {
+const completedTodo = async (req: Request, res: Response) => {
   const { id } = req?.params;
   const { completed } = req?.body;
 
@@ -118,7 +122,7 @@ const completedTodo = async (req, res) => {
   }
 };
 
-const deleteTodo = async (req, res) => {
+const deleteTodo = async (req: Request, res: Response) => {
   const { id } = req?.params;
 
   if (!id) {

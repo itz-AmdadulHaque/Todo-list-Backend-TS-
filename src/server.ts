@@ -7,7 +7,7 @@ import mongoose from "mongoose";
 // import env from "./config/env"
 import cors from "cors";
 import corsOptions from "./config/corsOptions"
-import morgan from "morgan";
+import morgan from "morgan"
 import connectDB from "./config/dbConn"
 import {
   addTodo,
