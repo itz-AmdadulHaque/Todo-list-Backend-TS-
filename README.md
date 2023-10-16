@@ -7,4 +7,4 @@ A MERN stack todo list web app that enables you to effortlessly add, delete, and
 - PORT
 - DB_URL
 
-# Frontend code [(Link)] (https://github.com/itz-AmdadulHaque/Todo-list-Frontend-TS-)
+# Frontend code [(Link)](https://github.com/itz-AmdadulHaque/Todo-list-Frontend-TS-)
